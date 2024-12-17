@@ -1,9 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+button{
+    width:fit-content;
+}
 .container {
     border: solid 1px black;
     width: 100vh;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    
 
 }
 

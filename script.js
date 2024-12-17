@@ -1,7 +1,9 @@
 const container = document.querySelector(".container");
-const btn = document.querySelector("button");
-btn.addEventListener("click", () => {
-    let gridNumber = Number(prompt("What grid size do you want?","eg. 16 gives 16x16 grid"))
+const createGrid = document.querySelector("#create");
+const eraseGrid = document.querySelector("#clear");
+
+function makeGrid(){
+    let gridNumber = Number(prompt("What grid size do you want?","Enter a number"))
     let gridTotal = gridNumber * gridNumber;
     if (gridTotal <= 10000){
         for (let i = 0; i < gridTotal; i++) {
@@ -18,7 +20,17 @@ btn.addEventListener("click", () => {
     }
     else{
         alert("input a number less than 100");
+        makeGrid();
     }
+}
+
+createGrid.addEventListener("click", () => {
+    makeGrid();
 })
+
+eraseGrid.addEventListener("click", () => {
+    window.location.reload(true)
+})
+
 
 
